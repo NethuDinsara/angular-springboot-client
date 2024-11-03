@@ -1,0 +1,15 @@
+<h2>Send Data to Spring Boot</h2>
+<form (ngSubmit)="onSubmit()">
+  <label for="email">Email:</label>
+  <input type="email" id="email" [(ngModel)]="formData.email" name="email" required>
+
+  <label for="phone">Phone:</label>
+  <input type="text" id="phone" [(ngModel)]="formData.phone" name="phone" required>
+
+  <label for="name">Name:</label>
+  <input type="text" id="name" [(ngModel)]="formData.name" name="name" required>
+
+  <button type="submit">Submit</button>
+</form>
+
+<p *ngIf="responseMessage">{{ responseMessage }}</p>
